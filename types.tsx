@@ -42,3 +42,21 @@ export type HomeScreenParamList = {
   Camera: undefined;
   CALLS: undefined;
 };
+
+export type user = {
+  id: string;
+  name: string;
+  imageUri: string;
+};
+
+export type Message = {
+  id: string;
+  content: string;
+  createdAt: string;
+};
+
+export type ChatRoom = {
+  id: string;
+  users: user[];
+  lastMessage: Message;
+};

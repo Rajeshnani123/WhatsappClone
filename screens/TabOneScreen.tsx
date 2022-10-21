@@ -1,16 +1,12 @@
 import { StyleSheet } from "react-native";
+import ChatListItem from "../components/ChatListItem";
 import { Text, View } from "../components/Themed";
-import { RootTabScreenProps } from "../types";
+import ChatRooms from "../data/ChatRooms";
 
 export default function TabOneScreen({ navigation }: any) {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab One</Text>
-      <View
-        style={styles.separator}
-        lightColor="#eee"
-        darkColor="rgba(255,255,255,0.1)"
-      />
+      <ChatListItem chatRoom={ChatRooms[1]} />
     </View>
   );
 }
