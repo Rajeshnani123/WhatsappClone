@@ -18,7 +18,12 @@ const ChatListItem = (props: ChatListItemProps) => {
   return (
     <TouchableOpacity
       style={styles.container}
-      onPress={() => navigation.navigate("ChatRoomScreen", { name: user.name })}
+      onPress={() =>
+        navigation.navigate("ChatRoomScreen", {
+          name: user.name,
+          photo: user.imageUri,
+        })
+      }
     >
       <View style={styles.leftContainer}>
         <Image source={{ uri: user.imageUri }} style={styles.avatar} />

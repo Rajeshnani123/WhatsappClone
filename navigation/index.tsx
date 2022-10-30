@@ -5,7 +5,7 @@ import {
 } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import * as React from "react";
-import { ColorSchemeName, View, TouchableOpacity } from "react-native";
+import { ColorSchemeName, View, TouchableOpacity, Image } from "react-native";
 
 import Colors from "../constants/Colors";
 import ModalScreen from "../screens/ModalScreen";
@@ -20,6 +20,7 @@ import {
   MaterialCommunityIcons,
   MaterialIcons,
 } from "@expo/vector-icons";
+import styles from "../components/ChatListItem/style";
 
 const Navigation = ({ colorScheme }: { colorScheme: ColorSchemeName }) => {
   return (
@@ -65,6 +66,15 @@ const RootNavigator = () => {
         component={ChatRoomScreen}
         options={({ route }) => ({
           title: route.params.name + "",
+          // headerLeft: () => (
+          //   <View>
+
+          //     <Image
+          //       source={{ uri: route.params.photo }}
+          //       style={styles.avatar}
+          //     />
+          //   </View>
+          // ),
           headerRight: () => (
             <View
               style={{

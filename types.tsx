@@ -19,7 +19,7 @@ declare global {
 export type RootStackParamList = {
   Root: NavigatorScreenParams<RootTabParamList> | undefined;
   Modal: undefined;
-  ChatRoomScreen: { name: String };
+  ChatRoomScreen: { name: String; photo: String };
   NotFound: undefined;
 };
 
@@ -54,6 +54,7 @@ export type Message = {
   id: string;
   content: string;
   createdAt: string;
+  user: user;
 };
 
 export type ChatRoom = {
