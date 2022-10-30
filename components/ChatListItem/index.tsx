@@ -1,5 +1,8 @@
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
+import moment from "moment";
 import React from "react";
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, TouchableOpacity } from "react-native";
 import { ChatRoom } from "../../types";
 import styles from "./style";
 
@@ -8,10 +11,15 @@ export type ChatListItemProps = {
 };
 
 const ChatListItem = (props: ChatListItemProps) => {
+  const navigation = useNavigation();
   const { chatRoom } = props;
-  const user = chatRoom.users[0];
+  const user = chatRoom.users[1];
+
   return (
-    <View style={styles.container}>
+    <TouchableOpacity
+      style={styles.container}
+      onPress={() => navigation.navigate("ChatRoomScreen", { name: user.name })}
+    >
       <View style={styles.leftContainer}>
         <Image source={{ uri: user.imageUri }} style={styles.avatar} />
         <View style={styles.midContainer}>
@@ -19,8 +27,10 @@ const ChatListItem = (props: ChatListItemProps) => {
           <Text style={styles.lastMessage}>{chatRoom.lastMessage.content}</Text>
         </View>
       </View>
-      <Text style={styles.time}>Yesterday</Text>
-    </View>
+      <Text style={styles.time}>
+        {moment(chatRoom.lastMessage.createdAt).format("DD/MM/YYYY")}
+      </Text>
+    </TouchableOpacity>
   );
 };
 
