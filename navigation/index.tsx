@@ -21,6 +21,7 @@ import {
   MaterialIcons,
 } from "@expo/vector-icons";
 import styles from "../components/ChatListItem/style";
+import ContactScreen from "../screens/ContactScreen";
 
 const Navigation = ({ colorScheme }: { colorScheme: ColorSchemeName }) => {
   return (
@@ -61,6 +62,7 @@ const RootNavigator = () => {
         component={NotFoundScreen}
         options={{ title: "Oops!" }}
       />
+      <Stack.Screen name="ContactScreen" component={ContactScreen} />
       <Stack.Screen
         name="ChatRoomScreen"
         component={ChatRoomScreen}

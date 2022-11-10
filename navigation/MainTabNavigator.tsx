@@ -3,7 +3,7 @@ import { createMaterialTopTabNavigator } from "@react-navigation/material-top-ta
 import React from "react";
 import { useColorScheme, Pressable } from "react-native";
 import Colors from "../constants/Colors";
-import TabOneScreen from "../screens/TabOneScreen";
+import ChatScreen from "../screens/ChatScreen";
 import TabTwoScreen from "../screens/TabTwoScreen";
 import { HomeScreenParamList } from "../types";
 
@@ -30,13 +30,13 @@ const MainTabNavigator = () => {
     >
       <BottomTab.Screen
         name="Camera"
-        component={TabOneScreen}
+        component={ChatScreen}
         options={{
           tabBarIcon: () => <Fontisto name="camera" color="white" size={20} />,
           tabBarLabel: () => null,
         }}
       />
-      <BottomTab.Screen name="CHATS" component={TabOneScreen} />
+      <BottomTab.Screen name="CHATS" component={ChatScreen} />
       <BottomTab.Screen name="STATUS" component={TabTwoScreen} />
       <BottomTab.Screen name="CALLS" component={TabTwoScreen} />
     </BottomTab.Navigator>

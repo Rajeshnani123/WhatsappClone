@@ -1,6 +1,6 @@
 import { StyleSheet, Dimensions } from "react-native";
 const { width, height } = Dimensions.get("screen");
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
   avatar: {
     width: 0.13 * width,
     height: 0.06 * height,
@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 16,
   },
-  lastMessage: {
+  status: {
     fontSize: 16,
     color: "grey",
   },
@@ -33,5 +33,3 @@ const styles = StyleSheet.create({
     justifyContent: "space-around",
   },
 });
-
-export default styles;
