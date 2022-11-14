@@ -22,6 +22,9 @@ import {
 } from "@expo/vector-icons";
 import styles from "../components/ChatListItem/style";
 import ContactScreen from "../screens/ContactScreen";
+import LoginScreen from "../screens/LoginScreen";
+import { OTPScreen } from "../screens/OTPScreen";
+import SignUpScreen from "../screens/SignUp";
 
 const Navigation = ({ colorScheme }: { colorScheme: ColorSchemeName }) => {
   return (
@@ -47,6 +50,21 @@ const RootNavigator = () => {
         headerTitleAlign: "left",
       }}
     >
+      <Stack.Screen
+        name="Login"
+        component={LoginScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="OTPScreen"
+        component={OTPScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="SignUp"
+        component={SignUpScreen}
+        options={{ headerShown: false }}
+      />
       <Stack.Screen
         name="Root"
         component={MainTabNavigator}

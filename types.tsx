@@ -17,6 +17,9 @@ declare global {
 }
 
 export type RootStackParamList = {
+  Login: undefined;
+  OTPScreen: { user: string };
+  SignUp: undefined;
   Root: NavigatorScreenParams<RootTabParamList> | undefined;
   Modal: undefined;
   ChatRoomScreen: { name: String; photo: String };

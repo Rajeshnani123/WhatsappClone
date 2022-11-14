@@ -1,3 +1,4 @@
+import React from "react";
 import { FlatList, StyleSheet } from "react-native";
 import ContactListItem from "../components/ContactListItem";
 import { View } from "../components/Themed";

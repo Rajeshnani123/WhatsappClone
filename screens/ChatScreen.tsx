@@ -1,3 +1,4 @@
+import React from "react";
 import { FlatList, StyleSheet } from "react-native";
 import ChatListItem from "../components/ChatListItem";
 import MessageButton from "../components/MessageButton";
