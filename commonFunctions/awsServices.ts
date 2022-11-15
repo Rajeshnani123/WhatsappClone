@@ -48,8 +48,8 @@ export const resenedOtp = async (user: string) => {
 
 export const userData = async () => {
   try {
-    const user = await Auth.currentAuthenticatedUser();
-    return true;
+    const user = await Auth.currentAuthenticatedUser({ bypassCache: true });
+    return user;
   } catch (error) {
     return false;
   }
