@@ -80,7 +80,13 @@ const RootNavigator = () => {
         component={NotFoundScreen}
         options={{ title: "Oops!" }}
       />
-      <Stack.Screen name="ContactScreen" component={ContactScreen} />
+      <Stack.Screen
+        name="ContactScreen"
+        component={ContactScreen}
+        options={{
+          title: "Contacts",
+        }}
+      />
       <Stack.Screen
         name="ChatRoomScreen"
         component={ChatRoomScreen}
